@@ -25,7 +25,7 @@ namespace flutter_desktop_sleep
         FlutterDesktopSleepPlugin &operator=(const FlutterDesktopSleepPlugin &) = delete;
 
     private:
-        HWND m_windowHandle;
+        HWND m_windowHandle = 0;
         // Called when a method is called on this plugin's channel from Dart.
         void HandleMethodCall(
             const flutter::MethodCall<flutter::EncodableValue> &method_call,
