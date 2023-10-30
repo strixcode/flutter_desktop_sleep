@@ -33,7 +33,7 @@ void FlutterDesktopSleepPlugin::RegisterWithRegistrar(
   ;
   auto plugin = std::make_unique<FlutterDesktopSleepPlugin>();
 
-  channel->SetMethodCallHandler(
+  channel_->SetMethodCallHandler(
       [plugin_pointer = plugin.get()](const auto &call, auto result) {
         plugin_pointer->HandleMethodCall(call, std::move(result));
       });
